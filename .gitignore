@@ -20,6 +20,11 @@ yarn-error.log
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-
+.vscode/*
+!host-app/.vscode/settings.json
+!host-app/.vscode/tasks.json
+!host-app/.vscode/launch.json
+!host-app/.vscode/extensions.json
+host-app/.history/*
  
  
