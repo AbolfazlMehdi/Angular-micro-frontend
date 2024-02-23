@@ -1,27 +1,35 @@
-# HostApp
+# Host App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+# Step 1: 
+Install the Module Federation Library
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# ng add @angular-architects/module-federation@your-version(16.0.3) --project your app name(host-app) --port 4200 --type dynamic-host
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Update mf.manifest.json:
 
-## Running unit tests
+ Ensure that your mf.manifest.json file in the assets folder contains information about the remote microfrontends. Make it more robust by including additional details such as isActive, displayName, routePath, ngModuleName, viaRoute, and withInPage.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ # Update main.ts: 
+ 
+ Modify your main.ts file to consider only the remote microfrontend marked as isActive: true in mf.manifest.json.
 
-## Running end-to-end tests
+ # Create mfe-dynamic.routes.ts: 
+ Implement dynamic route building based on the information from mf.manifest.json using the getManifest and loadRemoteModule functions.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+ # Create mfe-service.service.ts: 
+ 
+ Implement a service to initialize the remote microfrontends and update the router configuration.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+ # Update app.module.ts: 
+ 
+ Add an APP_INITIALIZER provider to initialize the MfeServiceService before the application starts.
+
+
+ # Create Landing Page Component:
+  Create a new landing page component to display information about the remote microfrontends.
