@@ -5,9 +5,14 @@
 /host-app/tmp
 /host-app/out-tsc
 /host-app/bazel-out
+/remote-app/dist
+/remote-app/tmp
+/remote-app/out-tsc
+/remote-app/bazel-out
 
 # Node
 /host-app/node_modules
+/remote-app/node_modules
 npm-debug.log
 yarn-error.log
 
@@ -26,5 +31,11 @@ yarn-error.log
 !host-app/.vscode/launch.json
 !host-app/.vscode/extensions.json
 host-app/.history/*
+remote-app/.vscode/*
+!remote-app/.vscode/settings.json
+!remote-app/.vscode/tasks.json
+!remote-app/.vscode/launch.json
+!remote-app/.vscode/extensions.json
+remote-app/.history/*
  
  
