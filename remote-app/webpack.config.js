@@ -2,7 +2,7 @@ const { share, withModuleFederationPlugin } = require('@angular-architects/modul
 
 const webpackConfig =  withModuleFederationPlugin({
 
-  name: 'remote-app',
+  name: 'remoteApp',
 
   exposes: {
     './PagesModule': './src/app/pages/pages.module.ts',
