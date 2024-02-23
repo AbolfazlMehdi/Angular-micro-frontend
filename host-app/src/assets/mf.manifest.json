@@ -1,0 +1,14 @@
+{
+   
+    "remoteApp": {
+      "isActive": true,
+      "remoteEntry": "",
+      "exposedModule": "./PagesModule",
+      "displayName": "remoteApp",
+      "routePath": "remote",
+      "ngModuleName": "PagesModule",
+      "viaRoute": true,
+      "withInPage": true
+    }
+  }
+  
