@@ -35,13 +35,12 @@ Install the Module Federation Library
   Create a new landing page component to display information about the remote microfrontends.
 
 
-  # Configure remote apps Styles, fonts and images: 
+ # Configuring Reverse Proxy for Remote App Assets
 for overriding assets need to use reverse proxy. add proxy.config.json file and then in angular.json
 
 change serve/options for run proxy file in develop mode. 
 
-# keep it mind that the proxy file just work in develop mode. in product mode you need to change IIS config 
-
+# Keep in mind that the proxy configuration only works in development mode. In production mode, you will need to modify the IIS configuration.
 
 If you need to set up a specific proxy rule in your Angular application, you can do so by configuring it in your web server or proxy server. Here's an example of a proxy rule that you can add to your server configuration:
 
