@@ -33,3 +33,17 @@ Install the Module Federation Library
 
  # Create Landing Page Component:
   Create a new landing page component to display information about the remote microfrontends.
+
+
+  # Configure remote apps Styles, fonts and images: 
+for overriding assets need to use reverse proxy. add proxy.config.json file and then in angular.json
+
+change serve/options for run proxy file in develop mode. 
+
+# keep it mind that the proxy file just work in develop mode. in product mode you need to change IIS config 
+
+if you have web.config file for product configuration add 
+#         <rule name="Proxy /assets/remote-app" stopProcessing="true">
+#          <match url="assets/remote-assets/(.*)" />
+#          <action type="Rewrite" url="http://remote-app url/assets/{R:0}" />
+#       </rule> 

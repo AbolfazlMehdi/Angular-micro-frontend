@@ -24,3 +24,7 @@ In the webpack.config.js file of your remote application (remot-app), configure 
 
 # Configure Routing: 
 Update the routing configuration of your remote microfrontend module (pagesModule) to define the routes for the components.
+
+
+# Configure Style: 
+for showing style you need to import your styles in share modules css(pages.component.scss)
