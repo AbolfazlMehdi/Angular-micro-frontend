@@ -42,8 +42,11 @@ change serve/options for run proxy file in develop mode.
 
 # keep it mind that the proxy file just work in develop mode. in product mode you need to change IIS config 
 
-if you have web.config file for product configuration add 
-        <rule name="Proxy /assets/remote-app" stopProcessing="true">
-           <match url="assets/remote-assets/(.*)" />
-           <action type="Rewrite" url="http://remote-app url/assets/{R:0}" />
-       </rule> 
+
+If you need to set up a specific proxy rule in your Angular application, you can do so by configuring it in your web server or proxy server. Here's an example of a proxy rule that you can add to your server configuration:
+
+```xml
+<rule name="Proxy /assets/remote-app" stopProcessing="true">
+    <match url="assets/remote-assets/(.*)" />
+    <action type="Rewrite" url="http://remote-app-url/assets/{R:0}" />
+</rule>
