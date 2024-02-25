@@ -1,0 +1,12 @@
+{
+    "/assets/remote-assets": {
+      "target": "http://localhost:4201",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/fonts": "/assets/remote-assets/fonts"
+      }
+    }
+ 
+  }
+  
