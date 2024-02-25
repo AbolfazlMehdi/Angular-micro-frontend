@@ -43,7 +43,7 @@ change serve/options for run proxy file in develop mode.
 # keep it mind that the proxy file just work in develop mode. in product mode you need to change IIS config 
 
 if you have web.config file for product configuration add 
-#         <rule name="Proxy /assets/remote-app" stopProcessing="true">
-#          <match url="assets/remote-assets/(.*)" />
-#          <action type="Rewrite" url="http://remote-app url/assets/{R:0}" />
-#       </rule> 
+        <rule name="Proxy /assets/remote-app" stopProcessing="true">
+           <match url="assets/remote-assets/(.*)" />
+           <action type="Rewrite" url="http://remote-app url/assets/{R:0}" />
+       </rule> 
